@@ -22,6 +22,20 @@ public class PlayerController : MonoBehaviour
     {
         if ( movementInput != Vector2.zero )
         {
+            var moveDirection = movementInput.normalized;
+
+            var absX = Mathf.Abs(moveDirection.x);
+            var absY = Mathf.Abs(moveDirection.y);
+
+            if (absX > absY)
+            {
+                moveDirection.y = 0;
+            }
+            else
+            {
+                moveDirection.x = 0;
+            }
+            
             var count = characterRigidbody2D.Cast(
                 movementInput,
                 MovementFilter,
@@ -30,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
             if ( count == 0 )
             {
-                characterRigidbody2D.MovePosition( characterRigidbody2D.position + movementInput *  MoveSpeed * Time.fixedDeltaTime );
+                characterRigidbody2D.MovePosition( characterRigidbody2D.position + moveDirection *  MoveSpeed * Time.fixedDeltaTime );
             }
         }
     }
