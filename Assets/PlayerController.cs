@@ -8,18 +8,34 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed ;
     public float CollisionOffset ;
     public ContactFilter2D MovementFilter;
+    public Animator PlayerAnimator;
     
     Vector2 movementInput;
+    SpriteRenderer spriteRenderer;
     Rigidbody2D characterRigidbody2D;
     readonly List<RaycastHit2D> castCollisions = new();
 
     void Start()
     {
         characterRigidbody2D = GetComponent<Rigidbody2D>();
+        PlayerAnimator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        PlayerAnimator.SetBool( "isHorizontalMoving", movementInput.x != 0 );
+        PlayerAnimator.SetBool( "isMovingUp", movementInput.y > 0 );
+        PlayerAnimator.SetBool( "isMovingDown", movementInput.y < 0 );
+
+        if ( movementInput.x > 0  )
+        {
+            spriteRenderer.flipX = true;
+        }else if ( movementInput.x < 0 )
+        {
+            spriteRenderer.flipX = false;
+        }
+        
         if ( movementInput != Vector2.zero )
         {
             var moveDirection = movementInput.normalized;
