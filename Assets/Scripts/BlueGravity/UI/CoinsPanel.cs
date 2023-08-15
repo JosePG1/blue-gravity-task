@@ -1,17 +1,23 @@
+using BlueGravity.World;
+using TMPro;
+using UnityEngine;
+
 namespace BlueGravity.UI
 {
     public class CoinsPanel : Panel
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] Player Player;
+        [SerializeField] TextMeshProUGUI CoinsValue;
+
+        void Awake()
         {
-        
+            UpdateCoinsValue();
         }
 
-        // Update is called once per frame
-        void Update()
+        void UpdateCoinsValue()
         {
-        
+            CoinsValue.text = Player.Coins.ToString();
+
         }
     }
 }
