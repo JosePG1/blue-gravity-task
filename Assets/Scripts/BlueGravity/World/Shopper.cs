@@ -1,5 +1,6 @@
 using System;
 using BlueGravity.UI;
+using TMPro;
 using UnityEngine;
 
 namespace BlueGravity.World
