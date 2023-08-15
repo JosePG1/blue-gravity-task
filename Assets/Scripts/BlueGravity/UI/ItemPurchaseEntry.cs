@@ -33,12 +33,10 @@ namespace BlueGravity.UI
             
             if ( Player.Instance.Coins > Item.Price )
             {
-                Debug.LogError( $"Buy item" );
                 Player.Instance.Inventory.Add( Item );
             }
             else
             {
-                Debug.LogError( $"No buy the item" );
                 LowBalancePanel.Show();
             }
         }

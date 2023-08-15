@@ -17,7 +17,6 @@ namespace BlueGravity.UI
                 if ( item != null )
                 {
                     entry.Item = item;
-                    Debug.LogError( $"Item exist" );
                 }
                 else
                 {
