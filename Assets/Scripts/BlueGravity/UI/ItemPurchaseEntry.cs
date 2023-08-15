@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace BlueGravity.UI
 {
-    public class ItemPurchaseEntry: MonoBehaviour
+    public class ItemPurchaseEntry: UIElement
     {
         public Item Item;
         [SerializeField] Button PurchaseButton;
@@ -18,7 +18,7 @@ namespace BlueGravity.UI
 
         void BuyItem()
         {
-            if ( Player.Instance.Money > Item.Price )
+            if ( Player.Instance.Coins > Item.Price )
             {
                 Player.Instance.Inventory.Add( Item );
             }

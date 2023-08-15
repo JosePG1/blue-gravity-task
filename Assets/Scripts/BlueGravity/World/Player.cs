@@ -6,7 +6,7 @@ namespace BlueGravity.World
 {
     public class Player : Singleton<Player>
     {
-        public int Money = 100;
+        public int Coins = 100;
 
         public List<Item> Inventory = new();
 

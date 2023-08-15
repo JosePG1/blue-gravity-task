@@ -4,6 +4,6 @@ namespace BlueGravity.World
 {
     public class Entity : MonoBehaviour
     {
-        [SerializeField] public string Name { get; set; }
+        [SerializeField] public string Name;
     }
 }
