@@ -9,13 +9,12 @@ namespace BlueGravity.UI
             gameObject.SetActive( !gameObject.activeSelf );
         }
         
-        public void Show()
+        public virtual void Show()
         {
             gameObject.SetActive( true );
-            // TODO: Use animator and fancy animation instead
         }
     
-        public void Hide()
+        public virtual void Hide()
         {
             gameObject.SetActive( false );
         }
