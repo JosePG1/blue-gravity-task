@@ -11,6 +11,7 @@ namespace BlueGravity.UI
         
         public void Show()
         {
+            gameObject.SetActive( true );
             // TODO: Use animator and fancy animation instead
         }
     

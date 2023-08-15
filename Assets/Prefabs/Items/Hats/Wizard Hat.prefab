@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c2e629d6e64a1898639d4d7a6dcf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: WizardHat
+  Name: Wizard Hat
+  ItemSprite: {fileID: 689465948, guid: de7892c21a9a140c19591d4e003582a6, type: 3}
   Price: 30
 --- !u!212 &2280140106069234979
 SpriteRenderer:

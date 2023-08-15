@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4334923840934555529}
   - component: {fileID: 5329177017184464287}
-  - component: {fileID: 6198159195160809934}
+  - component: {fileID: 7703849376609721470}
   m_Layer: 0
   m_Name: Mega Armor
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6198159195160809934
+--- !u!114 &7703849376609721470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7297015968932124456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c2e629d6e64a1898639d4d7a6dcf10, type: 3}
+  m_Script: {fileID: 11500000, guid: e2402af6ba7df4197b9307464bd76d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: MegaAmor
-  Price: 20
+  Name: Mega Amor
+  ItemSprite: {fileID: -1704254095, guid: 763638290658044fca9bb7ae971614fc, type: 3}
+  Price: 40

@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c2e629d6e64a1898639d4d7a6dcf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: LeatherHat
+  Name: Leather Hat
+  ItemSprite: {fileID: 584429005, guid: b4801443bfe20433ba114e8befa2c763, type: 3}
   Price: 10
 --- !u!212 &4820921337764218547
 SpriteRenderer:

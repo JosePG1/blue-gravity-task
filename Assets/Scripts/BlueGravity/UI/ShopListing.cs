@@ -9,12 +9,20 @@ namespace BlueGravity.UI
         [SerializeField] ItemPurchaseEntry EntryTemplate;
         [SerializeField] List<Item> Items;
 
-        public void OnEnable()
+        public void Awake()
         {
             foreach ( var item in Items )
             {
-                var entry = Instantiate( EntryTemplate, transform );
-                entry.Item = item;
+                var entry = Instantiate( EntryTemplate, transform ).GetComponent<ItemPurchaseEntry>();
+                if ( item != null )
+                {
+                    entry.Item = item;
+                    Debug.LogError( $"Item exist" );
+                }
+                else
+                {
+                    Debug.LogError( $"Item do not exist" );
+                }
             }
         }
     }
